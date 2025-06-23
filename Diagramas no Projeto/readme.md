@@ -1,60 +1,70 @@
-```plantuml
-@startuml
-class Terreno {
-  - tamanho: int
-  - tipoSolo: String
-  + prepararSolo(): void
-}
+```mermaid
+classDiagram
 
-class Arado extends Terreno {
-  + arar(): void
-  + plantar(): void
-}
+    class Fazendeiro {
+        -nome: String
+        -idade: int
+        +plantar(): void
+        +colher(): void
+    }
 
-class Plantado extends Terreno {
-  + plantar(): void
-}
+    class Terreno {
+        -tamanho: int
+        -tipoSolo: String
+        +prepararSolo(): void
+    }
 
-class Cultivado extends Terreno {
-  + colher(): void
-}
+    class Arado {
+        +arar(): void
+        +plantar(): void
+    }
 
-class Fazendeiro {
-  - nome: String
-  - idade: int
-  + plantar(): void
-  + colher(): void
-}
+    class Plantado {
+        +plantar(): void
+    }
 
-class Animal {
-  # nome: String
-  # idade: int
-  + emitirSom(): void
-}
+    class Cultivado {
+        +colher(): void
+    }
 
-class Vaca extends Animal {
-  + produzirLeite(): void
-}
+    class Equipamento {
+        -tipo: String
+        +usar(): void
+    }
 
-class Galinha extends Animal {
-  + botarOvo(): void
-}
+    class Trator {
+        +ararTerreno(): void
+    }
 
-class Equipamento {
-  - tipo: String
-  + usar(): void
-}
+    class Enxada {
+        +cavar(): void
+    }
 
-class Trator extends Equipamento {
-  + ararTerreno(): void
-}
+    class Animal {
+        #nome: String
+        #idade: int
+        +emitirSom(): void
+    }
 
-class Enxada extends Equipamento {
-  + cavar(): void
-}
+    class Vaca {
+        +produzirLeite(): void
+    }
 
-Fazendeiro --> Terreno
-Fazendeiro --> Equipamento
-Fazendeiro --> Animal
-@enduml
+    class Galinha {
+        +botarOvo(): void
+    }
+
+    Fazendeiro --> Terreno
+    Fazendeiro --> Equipamento
+    Fazendeiro --> Animal
+
+    Arado --|> Terreno
+    Plantado --|> Terreno
+    Cultivado --|> Terreno
+
+    Trator --|> Equipamento
+    Enxada --|> Equipamento
+
+    Vaca --|> Animal
+    Galinha --|> Animal
 ```
