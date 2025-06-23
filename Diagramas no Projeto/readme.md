@@ -1,3 +1,4 @@
+plantuml
 @startuml
 class Terreno {
   - tamanho: int
@@ -7,6 +8,7 @@ class Terreno {
 
 class Arado extends Terreno {
   + arar(): void
+  + plantar(): void
 }
 
 class Plantado extends Terreno {
@@ -54,6 +56,5 @@ class Enxada extends Equipamento {
 Fazendeiro --> Terreno
 Fazendeiro --> Equipamento
 Fazendeiro --> Animal
-
 @enduml
 
