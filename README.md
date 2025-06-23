@@ -8,6 +8,7 @@ A verdade é que diagramas ajudam a clarear as ideias, evitam retrabalho e torna
 
 
 📌 O que é UML?
+
 UML (Unified Modeling Language) é uma linguagem visual que representa a estrutura e o comportamento de um sistema orientado a objetos. A forma mais usada é o diagrama de classes, que mostra as classes, seus atributos, métodos e os relacionamentos entre elas.
 
 
@@ -29,6 +30,7 @@ Relacionamentos entre classes (herança, associação, etc.)
 
 
 💡 Notações:
+
 Símbolo	Significado
 
 	+		Público
@@ -97,6 +99,7 @@ public class Vaca extends Animal {
         System.out.println("A vaca produziu leite!");
     }
 }
+
 Classe Terreno e Plantado
 java
 
@@ -114,6 +117,7 @@ public class Plantado extends Terreno {
         System.out.println("Semente plantada.");
     }
 }
+
 Classe Fazendeiro
 java
 
@@ -134,6 +138,7 @@ public class Fazendeiro {
         System.out.println(nome + " está colhendo...");
     }
 }
+
 📌 Conclusão
 Ao usar diagramas como o UML, você não só ganha clareza sobre seu sistema, como também desenvolve um pensamento mais orientado a objetos. Com o tempo, isso se torna natural e seu código evolui junto com sua lógica de projeto.
 
