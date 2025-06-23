@@ -1,4 +1,4 @@
-plantuml
+```plantuml
 @startuml
 class Terreno {
   - tamanho: int
@@ -57,4 +57,4 @@ Fazendeiro --> Terreno
 Fazendeiro --> Equipamento
 Fazendeiro --> Animal
 @enduml
-
+```
